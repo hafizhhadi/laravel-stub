@@ -1,0 +1,30 @@
+<?php
+
+namespace {{ namespace }};
+
+use {{ rootNamespace }}Http\Controllers\Controller;
+use Illuminate\Http\Request;
+use Symfony\Component\HttpFoundation\Response;
+use App\Traits\Responsables\ResponseTrait;
+use Illuminate\Http\JsonResponse;
+
+class {{ class }} extends Controller
+{
+    use ResponseTrait;
+
+    public function test(): JsonResponse
+    {
+        try
+        {
+            return $this -> success(
+                Response::HTTP_OK,
+                '',
+                null,
+            );
+        }
+        catch (\Exception $e)
+        {
+            return $this -> error(Response::HTTP_CONFLICT, $e -> getMessage(), $e -> getLine());
+        }
+    }
+}
