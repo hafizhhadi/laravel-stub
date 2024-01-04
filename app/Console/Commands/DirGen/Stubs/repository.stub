@@ -1,0 +1,33 @@
+<?php
+
+namespace {{ namespace }};
+
+use App\Models\{{ model_namespace }};
+
+class {{ repository }}Repository implements {{ interface }}Interface
+{
+    public function show(string ${{ model_variable }}_id): {{ model }}
+    {
+        return {{ model }}::findOrFail(${{ model_variable }}_id);
+    }
+
+    public function store(array $data): {{ model }}
+    {
+        return {{ model }}::create($data);
+    }
+
+    public function update({{ model }} ${{ model_variable }}, array $data): bool
+    {
+        return ${{ model_variable }} -> update($data);
+    }
+
+    public function delete({{ model }} ${{ model_variable }}): bool
+    {
+        return ${{ model_variable }} -> delete();
+    }
+
+    public function forceDelete({{ model }} ${{ model_variable }}): bool
+    {
+        return ${{ model_variable }} -> forceDelete();
+    }
+}

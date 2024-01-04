@@ -1,0 +1,14 @@
+<?php
+
+namespace {{ namespace }};
+
+use App\Models\{{ model_namespace }};
+
+interface {{ interface }}Interface
+{
+    public function show(string ${{ model_variable }}_id): {{ model }};
+    public function store(array $data): {{ model }};
+    public function update({{ model }} ${{ model_variable }}, array $data): bool;
+    public function delete({{ model }} ${{ model_variable }}): bool;
+    public function forceDelete({{ model }} ${{ model_variable }}): bool;
+}
