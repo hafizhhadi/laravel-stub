@@ -62,6 +62,36 @@ class StateSeeder extends Seeder
                 'name'       => 'SELANGOR',
                 'state_code' => '10',
             ],
+            [
+                'id'         => strtolower(Ulid::generate()),
+                'name'       => 'TERENGGANU',
+                'state_code' => '11',
+            ],
+            [
+                'id'         => strtolower(Ulid::generate()),
+                'name'       => 'SABAH',
+                'state_code' => '12',
+            ],
+            [
+                'id'         => strtolower(Ulid::generate()),
+                'name'       => 'SARAWAK',
+                'state_code' => '13',
+            ],
+            [
+                'id'         => strtolower(Ulid::generate()),
+                'name'       => 'WILAYAH PERSEKUTUAN KUALA LUMPUR',
+                'state_code' => '14',
+            ],
+            [
+                'id'         => strtolower(Ulid::generate()),
+                'name'       => 'WILAYAH PERSEKUTUAN LABUAN',
+                'state_code' => '15',
+            ],
+            [
+                'id'         => strtolower(Ulid::generate()),
+                'name'       => 'WILAYAH PERSEKUTUAN PUTRAJAYA',
+                'state_code' => '16',
+            ],
         ]);
     }
 }
