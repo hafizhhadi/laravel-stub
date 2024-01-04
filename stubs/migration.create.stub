@@ -11,8 +11,7 @@ return new class extends Migration
         try
         {
             Schema::create('{{ table }}', function (Blueprint $table) {
-                $table -> id();
-
+                $table -> ulid('id') -> primary();
                 // Track
                 $table -> softDeletes();
                 $table -> timestamps();
