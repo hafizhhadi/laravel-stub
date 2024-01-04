@@ -20,5 +20,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::controller(LocationController::class) -> group(function() {
-    Route::get('/distance', 'nearestDistance');
+    Route::get('/distance-haversine', 'nearestDistanceHarversine');
+    Route::get('/distance-osrm', 'nearestDistanceOSRM');
 });
