@@ -1,6 +1,6 @@
 <?php
 
-namespace Database\Seeders;
+namespace Database\Seeders\Locations;
 
 use Illuminate\Database\Seeder;
 use Symfony\Component\Uid\Ulid;
