@@ -22,7 +22,7 @@ class {{ class }} extends Controller
                 null,
             );
         }
-        catch (\Exception $e)
+        catch (\Exception|\Throwable $e)
         {
             return $this -> error(Response::HTTP_CONFLICT, $e -> getMessage(), $e -> getLine());
         }
