@@ -14,6 +14,7 @@ return new class extends Migration
                 $table -> ulid('id') -> primary();
                 $table -> string('name', 40) -> nullable();
                 $table -> string('district_code', 4) -> nullable();
+                $table -> foreignUlid('state_id') -> constrained('states', 'id') -> cascadeOnUpdate() -> cascadeOnDelete();
 
                 // Track
                 $table -> softDeletes();
